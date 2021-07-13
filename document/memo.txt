@@ -1,0 +1,3 @@
+http://localhost:3000/api/login/ -d "username=test&password=sha-256-password&hashed=true"
+curl http://localhost:3000/api/login/ -d "username=admin@admin.com&password=1234"
+curl http://localhost:3000/api/logout -X POST -H "X-Auth-Token: ytGC4FrmWXfctPct51cVT3cKCTZDSDhvyjW+H36UYY0=" 
