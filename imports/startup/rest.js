@@ -1,6 +1,5 @@
 import { Restivus } from 'meteor/maka:rest';
 
-
 Items = new Mongo.Collection('items');
 Articles = new Mongo.Collection('articles');
 
@@ -9,15 +8,15 @@ if (Meteor.isServer) {
   const Api = new Restivus({
     useDefaultAuth: true,
     prettyJson: true,
-    auth: {
-      token: 'auth.apiKey',
-      user: function () {
-        return {
-          userId: this.request.headers['user-id'],
-          token: this.request.headers['login-token']
-        };
-      }
-    },
+    // auth: {
+    //   token: 'auth.apiKey',
+    //   user: function () {
+    //     return {
+    //       userId: this.request.headers['user-id'],
+    //       token: this.request.headers['login-token']
+    //     };
+    //   }
+    // },
     defaultHeaders: {
       'Content-Type': 'application/json'
     },
@@ -26,7 +25,7 @@ if (Meteor.isServer) {
     },
     onLoggedOut() {
       console.log(this.user.username + ' (' + this.userId + ') logged out');
-    },    
+    },        
   });
 
   // Generates: GET, POST on /api/items and GET, PUT, PATCH, DELETE on

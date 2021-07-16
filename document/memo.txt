@@ -1,3 +1,35 @@
 http://localhost:3000/api/login/ -d "username=test&password=sha-256-password&hashed=true"
 curl http://localhost:3000/api/login/ -d "username=admin@admin.com&password=1234"
 curl http://localhost:3000/api/logout -X POST -H "X-Auth-Token: ytGC4FrmWXfctPct51cVT3cKCTZDSDhvyjW+H36UYY0=" 
+curl http://localhost:3000/api/login -d "email=admin@admin.com&password=1234"
+curl http://localhost:3000/api/logout -X POST -H "X-Auth-Token: Eb7fyKQMBRH06OhNGmAJQEV0lIHvYJDYimn20OT2qzQ" 
+curl http://localhost:3000/api/logout -X POST -H "X-Auth-Token: QqfvY/tFgNo71eRltmn/RCpVz8Kw6ovhB2rWgdGX41w=" 
+
+{
+    "email": "admin@admin.com",
+    "password": "1234"
+}
+
+
+curl http://localhost:3000/api/login/ -d "email=admin@admin.com&password=1234"
+curl http://localhost:3000/api/logout -X POST -H "X-Auth-Token: qh8iX6yH6nvwj8X5l4BzMQJVgcbNkJDPF4M1Fgaa8v4" 
+
+
+
+curl http://localhost:3000/api/logout -X POST -H "X-Auth-Token: MoR85ZsRRU5kcpuzoGnWYOGODhHyIVk_bhRjrF0G1ps" -H "X-User-Id: WtLZ3QnmKz2pTZQYy"
+
+curl http://localhost:3000/api/logout -X POST -H "X-Auth-Token: -GJTS7Ko24bUtZsSAhhdMIwEBTsM9wEbW1q6JQa-2_M" -H "X-User-Id: WtLZ3QnmKz2pTZQYy"
+
+
+QTIT-pWOudKzTmj1zf3JRYBt756WH8rIREF3NuQbhbF
+
+
+
+curl http://localhost:3000/api/logout -X POST -H 'X-Auth-Token: NHmBG1DjVCjAET1Nw4EuZ9bPSlp3kRSvR7s-CEHxO9S'
+
+{
+  "authToken": "XD-vJjF6eJD7g4pyZSldgAMEV0s6jArmv4ZzHP-7Kre",
+  "userId": "TAkphdBgnk5tzg7JM",
+  "when": "2021-07-16T13:48:49.337Z"
+}
+

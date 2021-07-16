@@ -1,3 +1,3 @@
-import './rest';
 import './accountConf';
 import './fixtures';
+import './rest';
